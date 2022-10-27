@@ -1,0 +1,1461 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+   <head>
+      <meta charset="UTF-8">
+      <title align="center">Voice-preserving Zero-shot Multiple Accent Conversion: Samples & Demo"</title>
+      <style type="text/css">
+        body, input, select, td, li, div, textarea, p {
+            font-size: 11px;
+            line-height: 16px;
+            font-family: verdana, arial, sans-serif;
+        }
+
+        body {
+            margin:5px;
+            background-color:white;
+        }
+
+        h1 {
+            font-size:16px;
+            font-weight:bold;
+        }
+
+        h2 {
+            font-size:14px;
+            font-weight:bold;
+        }
+      </style>
+   </head>
+   <body>
+      <article>
+         <header>
+            <h1>Voice-preserving Zero-shot Multiple Accent Conversion</h1>
+         </header>
+      </article>
+<hr>
+
+      <div>
+        <h2>Abstract</h2>
+        <p>
+Most people who have tried to learn a foreign language would have experienced difficulties understanding or speaking with a native speaker's accent. For native speakers, understanding or speaking a new accent is likewise a difficult task.
+An accent conversion system that changes a speaker’s accent but preserves that speaker’s voice identity, such as timbre and pitch, has the potential for a range of applications, such as communication, language learning, and entertainment. Existing accent conversion models tend to change the speaker identity and accent at the same time. Here, we use adversarial learning to disentangle accent dependent features while retaining other acoustic characteristics. What sets our work apart from existing accent conversion models is the capability to convert an unseen speaker’s utterance to multiple accents while preserving its original voice identity. Subjective evaluations show that our model generates audio that sound closer to the target accent and like the original speaker.
+        </div>
+<hr>
+    <h2> Audio samples from - British Accented Male Speaker </h2>
+
+    <div>
+        <h3> American accent </h3>
+        <table border = "1" class="inlineTable">
+            <col width="250">
+            <col width="250">
+            <col width="250">
+            <tr> 
+                <th>Source</th>
+                <th>Ablation - Converted to Target Accent</th>
+                <th>Proposed - Converted to Target Accent </th>
+            </tr>
+            <tr>
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/british_male_src/0.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/ablation_british_male_american/0.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/test_british_male_american/0.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/british_male_src/1.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/ablation_british_male_american/1.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/test_british_male_american/1.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/british_male_src/2.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/ablation_british_male_american/2.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/test_british_male_american/2.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/british_male_src/3.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/ablation_british_male_american/3.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/test_british_male_american/3.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/british_male_src/4.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/ablation_british_male_american/4.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/test_british_male_american/4.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/british_male_src/5.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/ablation_british_male_american/5.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/test_british_male_american/5.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/british_male_src/6.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/ablation_british_male_american/6.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/test_british_male_american/6.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/british_male_src/7.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/ablation_british_male_american/7.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/test_british_male_american/7.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/british_male_src/8.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/ablation_british_male_american/8.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/test_british_male_american/8.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/british_male_src/9.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/ablation_british_male_american/9.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/test_british_male_american/9.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+            </tr>
+        </table>
+    </div>
+        
+
+    <div>
+        <h3> Hindi accent </h3>
+        <table border = "1" class="inlineTable">
+            <col width="250">
+            <col width="250">
+            <col width="250">
+            <tr> 
+                <th>Source</th>
+                <th>Ablation - Converted to Target Accent</th>
+                <th>Proposed - Converted to Target Accent </th>
+            </tr>
+            <tr>
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/british_male_src/0.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/ablation_british_male_hindi/0.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/test_british_male_hindi/0.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/british_male_src/1.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/ablation_british_male_hindi/1.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/test_british_male_hindi/1.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/british_male_src/2.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/ablation_british_male_hindi/2.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/test_british_male_hindi/2.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/british_male_src/3.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/ablation_british_male_hindi/3.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/test_british_male_hindi/3.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/british_male_src/4.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/ablation_british_male_hindi/4.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/test_british_male_hindi/4.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/british_male_src/5.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/ablation_british_male_hindi/5.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/test_british_male_hindi/5.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/british_male_src/6.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/ablation_british_male_hindi/6.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/test_british_male_hindi/6.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/british_male_src/7.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/ablation_british_male_hindi/7.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/test_british_male_hindi/7.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/british_male_src/8.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/ablation_british_male_hindi/8.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/test_british_male_hindi/8.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/british_male_src/9.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/ablation_british_male_hindi/9.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/test_british_male_hindi/9.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div>
+        <h3> Korean accent </h3>
+        <table border = "1" class="inlineTable">
+            <col width="250">
+            <col width="250">
+            <col width="250">
+            <tr> 
+                <th>Source</th>
+                <th>Ablation - Converted to Target Accent</th>
+                <th>Proposed - Converted to Target Accent </th>
+            </tr>
+            <tr>
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/british_male_src/0.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/ablation_british_male_korean/0.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/test_british_male_korean/0.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/british_male_src/1.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/ablation_british_male_korean/1.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/test_british_male_korean/1.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/british_male_src/2.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/ablation_british_male_korean/2.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/test_british_male_korean/2.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/british_male_src/3.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/ablation_british_male_korean/3.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/test_british_male_korean/3.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/british_male_src/4.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/ablation_british_male_korean/4.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/test_british_male_korean/4.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/british_male_src/5.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/ablation_british_male_korean/5.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/test_british_male_korean/5.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/british_male_src/6.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/ablation_british_male_korean/6.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/test_british_male_korean/6.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/british_male_src/7.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/ablation_british_male_korean/7.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/test_british_male_korean/7.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/british_male_src/8.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/ablation_british_male_korean/8.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/test_british_male_korean/8.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/british_male_src/9.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/ablation_british_male_korean/9.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/test_british_male_korean/9.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <hr>
+    <h2> Audio Samples from - Hindi Accented Female Speaker  </h2>
+    <div>
+        <h3> American accent </h3>
+        <table border = "1" class="inlineTable">
+            <col width="250">
+            <col width="250">
+            <col width="250">
+            <tr> 
+                <th>Source</th>
+                <th>Ablation - Converted to Target Accent</th>
+                <th>Proposed - Converted to Target Accent </th>
+            </tr>
+            <tr>
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/hindi_female_src/0.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/ablation_hindi_female_american/0.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/test_hindi_female_american/0.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/hindi_female_src/1.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/ablation_hindi_female_american/1.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/test_hindi_female_american/1.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/hindi_female_src/2.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/ablation_hindi_female_american/2.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/test_hindi_female_american/2.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/hindi_female_src/3.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/ablation_hindi_female_american/3.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/test_hindi_female_american/3.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/hindi_female_src/4.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/ablation_hindi_female_american/4.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/test_hindi_female_american/4.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/hindi_female_src/5.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/ablation_hindi_female_american/5.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/test_hindi_female_american/5.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/hindi_female_src/6.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/ablation_hindi_female_american/6.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/test_hindi_female_american/6.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/hindi_female_src/7.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/ablation_hindi_female_american/7.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/test_hindi_female_american/7.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/hindi_female_src/8.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/ablation_hindi_female_american/8.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/test_hindi_female_american/8.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/hindi_female_src/9.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/ablation_hindi_female_american/9.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/test_hindi_female_american/9.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+            </tr>
+        </table>
+    </div>
+        
+
+    <div>
+        <h3> Hindi accent </h3>
+        <table border = "1" class="inlineTable">
+            <col width="250">
+            <col width="250">
+            <col width="250">
+            <tr> 
+                <th>Source</th>
+                <th>Ablation - Converted to Target Accent</th>
+                <th>Proposed - Converted to Target Accent </th>
+            </tr>
+            <tr>
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/hindi_female_src/0.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/ablation_hindi_female_hindi/0.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/test_hindi_female_hindi/0.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/hindi_female_src/1.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/ablation_hindi_female_hindi/1.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/test_hindi_female_hindi/1.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/hindi_female_src/2.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/ablation_hindi_female_hindi/2.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/test_hindi_female_hindi/2.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/hindi_female_src/3.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/ablation_hindi_female_hindi/3.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/test_hindi_female_hindi/3.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/hindi_female_src/4.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/ablation_hindi_female_hindi/4.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/test_hindi_female_hindi/4.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/hindi_female_src/5.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/ablation_hindi_female_hindi/5.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/test_hindi_female_hindi/5.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/hindi_female_src/6.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/ablation_hindi_female_hindi/6.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/test_hindi_female_hindi/6.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/hindi_female_src/7.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/ablation_hindi_female_hindi/7.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/test_hindi_female_hindi/7.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/hindi_female_src/8.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/ablation_hindi_female_hindi/8.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/test_hindi_female_hindi/8.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/hindi_female_src/9.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/ablation_hindi_female_hindi/9.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/test_hindi_female_hindi/9.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div>
+        <h3> Korean accent </h3>
+        <table border = "1" class="inlineTable">
+            <col width="250">
+            <col width="250">
+            <col width="250">
+            <tr> 
+                <th>Source</th>
+                <th>Ablation - Converted to Target Accent</th>
+                <th>Proposed - Converted to Target Accent </th>
+            </tr>
+            <tr>
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/hindi_female_src/0.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/ablation_hindi_female_korean/0.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/test_hindi_female_korean/0.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/hindi_female_src/1.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/ablation_hindi_female_korean/1.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/test_hindi_female_korean/1.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/hindi_female_src/2.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/ablation_hindi_female_korean/2.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/test_hindi_female_korean/2.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/hindi_female_src/3.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/ablation_hindi_female_korean/3.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/test_hindi_female_korean/3.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/hindi_female_src/4.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/ablation_hindi_female_korean/4.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/test_hindi_female_korean/4.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/hindi_female_src/5.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/ablation_hindi_female_korean/5.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/test_hindi_female_korean/5.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/hindi_female_src/6.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/ablation_hindi_female_korean/6.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/test_hindi_female_korean/6.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/hindi_female_src/7.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/ablation_hindi_female_korean/7.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/test_hindi_female_korean/7.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/hindi_female_src/8.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/ablation_hindi_female_korean/8.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/test_hindi_female_korean/8.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/hindi_female_src/9.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/ablation_hindi_female_korean/9.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+
+                <td>
+                    <audio controls style="width: 200px;">
+                    <source src=./samples/test_hindi_female_korean/9.wav type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+            </tr>
+        </table>
+    </div>    
+
+   </body>
+</html>
